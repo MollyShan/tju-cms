@@ -1,5 +1,4 @@
 'use strict';
-const HEIGHT_MAX_OFFSET = 60;
 
 export default {
 	state: {
@@ -14,7 +13,7 @@ export default {
 	},
 	getters: {
 		isOverViewer({ screen, scroll }) {
-			return scroll.offsetTop <= screen.height - HEIGHT_MAX_OFFSET;
+			return scroll.offsetTop <= screen.height;
 		}
 	},
 	actions: {

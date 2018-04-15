@@ -71,7 +71,7 @@
 
 	</header>
 
-	<banner style="margin-top:112px"></banner>
+	<banner></banner>
 
 	<section id="main-content" :class="{
 			'scroll-fixed': isSubnavCovered
@@ -321,13 +321,10 @@ header {
 	z-index: 1;
 	top: 100%;
 	width: 100%;
-	// main {
-	// 	position: relative;
-	// 	top: 100%;
-	// }
+	margin-top: 112px;
 	
 	&.scroll-fixed {
-		// margin-top: 112px;
+		margin-top: 0;
 		position: fixed;
 		top: 112px;
 	}
