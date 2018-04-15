@@ -15,9 +15,10 @@
 			id="banner-explore">
 			<p class="text-white"
 				v-scroll-to="{
-				el: 'main',
+				el: '#main-spacer',
 				container: 'body',
 				easing: 'linear',
+				offset:979
 			}">Explore Stanford
 				<span class="d-block text-center">
 					<i class="fa fa-chevron-down"></i>
@@ -47,6 +48,7 @@ export default {
 <style lang="less">
 #home-banner {
 	position: absolute;
+	z-index: 1000;
 	top: 0;
 	bottom: 0;
 	left: 0;

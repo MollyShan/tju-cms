@@ -32,3 +32,15 @@ window.addEventListener('scroll',  _.throttle(function () {
 	store.commit('setScrollOffsetTop', window.scrollY);
 	store.commit('setScrollOffsetLeft', window.scrollX);
 }, 100));
+
+setInterval(() => {
+	const height = window.innerHeight;
+	const isOverViewer = store.getters.isOverViewer;
+
+	if (isOverViewer) {
+		const spacer = document.getElementById('main-spacer');
+
+		spacer.style.display = 'none';
+		spacer.style.height = '0px';
+	}
+}, 100)

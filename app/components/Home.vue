@@ -73,11 +73,14 @@
 
 	<banner style="margin-top:112px"></banner>
 
-	<section id="main-content">
+	<section id="main-content" :class="{
+			'scroll-fixed': isSubnavCovered
+		}">
 		<main style="min-height: 600px">
 			<simple-card-section></simple-card-section>
 			<card-with-date style="background: #2f2424;"></card-with-date>
 		</main>
+		<spacer></spacer>
 
 		<footer class="">
 			<section id="footer-pre" class="bg-light py-3">
@@ -168,13 +171,15 @@
 import Banner from './directory/banner.vue';
 import SimpleCardSection from './directory/simple-card-section.vue';
 import CardWithDate from './directory/card-with-date.vue';
+import Spacer from './Spacer.vue';
 
 export default {
 	name: 'home',
 	components: {
 		Banner,
 		SimpleCardSection,
-		CardWithDate
+		CardWithDate,
+		Spacer
 	},
 	mounted() {
 		console.log(this.$store.state.scroll.offsetTop);
@@ -313,8 +318,20 @@ header {
 }
 #main-content {
 	position: absolute;
+	z-index: 1;
 	top: 100%;
 	width: 100%;
+	// main {
+	// 	position: relative;
+	// 	top: 100%;
+	// }
+	
+	&.scroll-fixed {
+		// margin-top: 112px;
+		position: fixed;
+		top: 112px;
+	}
 }
+
 
 </style>
