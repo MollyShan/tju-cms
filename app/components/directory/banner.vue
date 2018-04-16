@@ -15,11 +15,10 @@
 			id="banner-explore">
 			<p class="text-white"
 				v-scroll-to="{
-				el: '#main-spacer',
-				container: 'body',
-				easing: 'linear',
-				offset:979
-			}">Explore Stanford
+					el: 'body',
+					offset: scrollOffset
+				}"
+			>Explore Stanford
 				<span class="d-block text-center">
 					<i class="fa fa-chevron-down"></i>
 				</span>
@@ -35,6 +34,11 @@ export default {
 	data() {
 		return {
 			bannerHeight: Number
+		}
+	},
+	computed: {
+		scrollOffset() {
+			return this.$store.state.screen.height + 1;
 		}
 	},
 	mounted() {
@@ -56,7 +60,6 @@ export default {
 	width: 100%;
 	height: 100%;
 	overflow: hidden;
-	margin-top: -112px;
 	box-shadow: 0 0 10px rgba(0,0,0,.15),
 			0 3px 3px rgba(0,0,0,.15);
 

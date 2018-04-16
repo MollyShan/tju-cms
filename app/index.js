@@ -31,7 +31,7 @@ window.onresize = function () {
 window.addEventListener('scroll',  _.throttle(function () {
 	store.commit('setScrollOffsetTop', window.scrollY);
 	store.commit('setScrollOffsetLeft', window.scrollX);
-}, 100));
+}), 50);
 
 setInterval(() => {
 	const height = window.innerHeight;
