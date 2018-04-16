@@ -78,7 +78,37 @@
 		}">
 		<main style="min-height: 600px">
 			<simple-card-section></simple-card-section>
-			<card-with-date style="background: #2f2424;"></card-with-date>
+			<card-with-date></card-with-date>
+			<image-text-briefing></image-text-briefing>
+			<poster></poster>
+			<picture-with-texts></picture-with-texts>
+			<div class="container py-3 text-center">
+				<div class="row">
+					<div class="col-sm-6 offset-sm-3">
+						<h2 class="display-4">About Stanford</h2>
+						<p class="h2">A place for learning, discovery, innovation, expression and discourse</p>
+					</div>
+				</div>
+				<div class="row py-5">
+					<div class="col-sm-4">
+						<h2 class="">19</h2>
+						<p class="h5">Nobel laureates currently on faculty</p>
+					</div>
+					<div class="col-sm-4">
+						<h2 class="">4:1</h2>
+						<p class="h5">Student-to-faculty ratio</p>
+					</div>
+					<div class="col-sm-4">
+						<h2 class="">6,000+</h2>
+						<p class="h5">Externally sponsored research projects</p>
+					</div>
+				</div>
+				<div class="d-flex justify-content-center">
+					<button class="btn btn-danger btn-lg rounded-0 mb-3" type="button">
+						More About Stanford
+					</button>
+				</div>
+			</div>
 		</main>
 		<spacer></spacer>
 
@@ -122,7 +152,7 @@
 							<div class="row">
 								<div class="col m-2" v-for="(button, index) in footButtonList"
 									:key="index">
-									<button class="btn btn-outline-dark btn-block">{{button.text}}</button>	
+									<button class="btn btn-outline-dark btn-block rounded-0">{{button.text}}</button>	
 								</div>
 							</div>
 						</div>
@@ -171,15 +201,22 @@
 import Banner from './directory/banner.vue';
 import SimpleCardSection from './directory/simple-card-section.vue';
 import CardWithDate from './directory/card-with-date.vue';
+import ImageTextBriefing from './directory/image-text-briefing.vue';
+import Poster from './directory/poster.vue';
+import PictureWithTexts from './directory/picture-with-texts.vue';
+
 import Spacer from './Spacer.vue';
 
 export default {
 	name: 'home',
 	components: {
 		Banner,
+		Spacer,
 		SimpleCardSection,
 		CardWithDate,
-		Spacer
+		ImageTextBriefing,
+		Poster,
+		PictureWithTexts
 	},
 	mounted() {
 		console.log(this.$store.state.scroll.offsetTop);
@@ -190,6 +227,9 @@ export default {
 	computed: {
 		isSubnavCovered() {
 			return this.$store.getters.isOverViewer;
+		},
+		isFuzzyscreenEntered() {
+			return this.$store.getters.isEnterViewer;
 		}
 	},
 	data() {
@@ -321,14 +361,20 @@ header {
 	z-index: 1;
 	top: 100%;
 	width: 100%;
+<<<<<<< HEAD
 	margin-top: 112px;
 	
 	&.scroll-fixed {
 		margin-top: 0;
+=======
+	
+	&.scroll-fixed {
+>>>>>>> b0b9ff5... [ADDED] patterns
 		position: fixed;
 		top: 112px;
 	}
 }
+
 
 
 </style>

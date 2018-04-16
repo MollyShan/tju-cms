@@ -9,7 +9,7 @@
 			id="banner-img">
 		<div class=""
 			id="banner-title">
-			<h1 class="text-white">Stanford</h1>
+			<h1 class="text-white display-1">Stanford</h1>
 		</div>
 		<div class=""
 			id="banner-explore">

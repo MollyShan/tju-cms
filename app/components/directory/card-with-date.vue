@@ -1,7 +1,13 @@
 <template>
 
-<div>
+<div style="background: #2f2424;">
 	<div class="container py-5">
+		<div class="row text-center text-white pb-5">
+			<div class="col-sm-6 offset-sm-3">
+				<h2 class="display-4">Stanford Events</h2>
+				<p class="h2">What's happening on campus</p>
+			</div>
+		</div>
 		<div class="card-deck">
 			<div class="card card-float border-0 rounded-0"
 				v-for="(info, index) in infoList"
@@ -19,6 +25,11 @@
 					<p class="card-text">{{info.time}}</p>
 				</div>
 			</div>
+		</div>
+		<div class="d-flex justify-content-center">
+			<button class="btn btn-danger btn-lg rounded-0 my-5" type="button">
+				More Stanford Events
+			</button>
 		</div>
 	</div>
 </div>

@@ -8,12 +8,6 @@
 <script>
 import Vue from 'vue';
 
-// export default {
-// 	el: '#main-spacer',
-// 	name: 'spacer'
-
-// }
-
 export default new Vue({
 	el: '#main-spacer',
 	name: 'spacer'
@@ -25,7 +19,11 @@ export default new Vue({
 #main-spacer {
 	visibility: hidden;
 	z-index: -100;
+<<<<<<< HEAD
 	height: 2363px;
+=======
+	height: 5517px;
+>>>>>>> b0b9ff5... [ADDED] patterns
 	// width: auto;
 	display: block;
 }

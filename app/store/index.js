@@ -14,7 +14,11 @@ export default {
 	getters: {
 		isOverViewer({ screen, scroll }) {
 			return scroll.offsetTop <= screen.height;
+		},
+		isEnterViewer({ screen, scroll }) {
+			return scroll.offsetTop >= screen.height * 3;
 		}
+	
 	},
 	actions: {
 
