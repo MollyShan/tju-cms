@@ -1,6 +1,12 @@
 <template>
 
 <div class="container py-5">
+	<div class="row text-center mb-5">
+		<div class="col-sm-8 offset-sm-2">
+			<h2 class="display-4 font-weight-bold">Admission</h2>
+			<p class="h2">Diverse perspectives brought together by a shared commitment to excellence, learning and growing</p>
+		</div>
+	</div>
 	<div>
 		<img src="/images/card3.jpg" alt="" class="img-fluid">
 	</div>

@@ -13,6 +13,9 @@ import VueScrollTo from 'vue-scrollto';
 Vue.use(VueScrollTo);
 Vue.use(Vuex);
 
+import RImage from './components/r-image.vue';
+Vue.component('r-image', RImage);
+
 import App from './app.vue';
 import router from './routes';
 import rootStore from './store';
@@ -22,6 +25,7 @@ const store = new Vuex.Store(rootStore);
 const app = new Vue(
 	Object.assign({ router, store }, App)
 ).$mount('#app');
+
 
 window.onresize = function () {
 	store.commit('setScreenWidth', window.innerWidth);

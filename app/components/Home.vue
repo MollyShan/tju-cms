@@ -1,6 +1,7 @@
 <template>
 
 <div>
+	<spacer></spacer>
 	<header class="fixed-top">
 		<nav class="navbar navbar-expand-lg navbar-dark"
 			style="background-color: #b1040e;">
@@ -78,6 +79,20 @@
 		}">
 		<main style="min-height: 600px">
 			<simple-card-section></simple-card-section>
+			<div class="text-center py-5 container">
+				<h4>Get daily news updates from <span class="font-italic">Stanford Report</span></h4>
+				<div class="form-group row mt-4">
+					<div class="col-sm-6 offset-sm-2">
+						<input type="text"
+							class="form-control rounded-0"
+							placeholder="Enter your email address">
+					</div>
+					<div class="col-sm-2">
+						<button class="btn btn-dark btn-block rounded-0"
+							type="button">Sign Up</button>
+					</div>
+				</div>
+			</div>
 			<card-with-date></card-with-date>
 			<image-text-briefing></image-text-briefing>
 			<poster></poster>
@@ -85,7 +100,7 @@
 			<div class="container py-3 text-center">
 				<div class="row">
 					<div class="col-sm-6 offset-sm-3">
-						<h2 class="display-4">About Stanford</h2>
+						<h2 class="display-4 font-weight-bold">About Stanford</h2>
 						<p class="h2">A place for learning, discovery, innovation, expression and discourse</p>
 					</div>
 				</div>
@@ -110,23 +125,24 @@
 				</div>
 			</div>
 		</main>
-		<spacer></spacer>
+		
 
+		<footer-banner></footer-banner>
 		<footer class="">
-			<section id="footer-pre" class="bg-light py-3">
+			<section id="footer-pre" class="bg-light py-2">
 				<div class="container">
-					<div class="row">
-						<div class="col-md-10">
-							<a href="" class="d-inline-block"><i class="fa fa-cloud"></i></a>
+					<div class="d-flex justify-content-between h1">
+						<div class="p-2">
+							<a href="" class="d-inline-block text-dark"><i class="fa fa-cloud"></i></a>
 							<span>47° F / 8° C </span>
 
 						</div>
-						<div class="col-md-2">
-							<a href="" class="d-inline-block"><i class="fa fa-facebook-square"></i></a>
-							<a href="" class="d-inline-block"><i class="fa fa-twitter"></i></a>
-							<a href="" class="d-inline-block"><i class="fa fa-instagram"></i></a>
-							<a href="" class="d-inline-block"><i class="fa fa-youtube-play"></i></a>
-							<a href="" class="d-inline-block"><i class="fa fa-apple"></i></a>
+						<div class="p-2">
+							<a href="" class="d-inline-block text-dark"><i class="fa fa-facebook-square"></i></a>
+							<a href="" class="d-inline-block text-dark"><i class="fa fa-twitter"></i></a>
+							<a href="" class="d-inline-block text-dark"><i class="fa fa-instagram"></i></a>
+							<a href="" class="d-inline-block text-dark"><i class="fa fa-youtube-play"></i></a>
+							<a href="" class="d-inline-block text-dark"><i class="fa fa-apple"></i></a>
 						</div>
 					</div>
 
@@ -204,6 +220,7 @@ import CardWithDate from './directory/card-with-date.vue';
 import ImageTextBriefing from './directory/image-text-briefing.vue';
 import Poster from './directory/poster.vue';
 import PictureWithTexts from './directory/picture-with-texts.vue';
+import FooterBanner from './directory/footer-banner.vue';
 
 import Spacer from './Spacer.vue';
 
@@ -216,21 +233,13 @@ export default {
 		CardWithDate,
 		ImageTextBriefing,
 		Poster,
-		PictureWithTexts
-	},
-	mounted() {
-		console.log(this.$store.state.scroll.offsetTop);
-	},
-	methods: {
-		
+		PictureWithTexts,
+		FooterBanner
 	},
 	computed: {
 		isSubnavCovered() {
 			return this.$store.getters.isOverViewer;
 		},
-		isFuzzyscreenEntered() {
-			return this.$store.getters.isEnterViewer;
-		}
 	},
 	data() {
 		return {
@@ -361,15 +370,8 @@ header {
 	z-index: 1;
 	top: 100%;
 	width: 100%;
-<<<<<<< HEAD
-	margin-top: 112px;
 	
 	&.scroll-fixed {
-		margin-top: 0;
-=======
-	
-	&.scroll-fixed {
->>>>>>> b0b9ff5... [ADDED] patterns
 		position: fixed;
 		top: 112px;
 	}

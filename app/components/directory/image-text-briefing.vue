@@ -4,7 +4,7 @@
 	<div class="container py-5">
 		<div class="row text-center">
 			<div class="col-sm-8 offset-sm-2 py-5">
-				<h2 class="display-4">Academics</h2>
+				<h2 class="display-4 font-weight-bold">Academics</h2>
 				<p class="h2">Preparing students to make meaningful contributions to society as engaged citizens and leaders in a complex world</p>
 			</div>
 		</div>
@@ -14,7 +14,7 @@
 				v-for="(info, index) in infoList"
 				:key="index">
 				<div class="card-img-top">
-					<img :src="info.imgUrl" alt="" class="img-fluid">
+					<r-image :src="info.imgUrl" pattern="16:9"></r-image>
 				</div>
 				<div class="card-body">
 					<h5 class="card-title">{{info.title}}</h5>
@@ -24,8 +24,29 @@
 			</div>
 		</div>
 
+		<div class="banner-content text-center container py-5">
+			<h2 class="">Seven schools in which to pursue your passions</h2>
+			<ul class="nav h5 justify-content-center footer-banner-link">
+				<li class="nav-item border-right">
+					<a href="" class="nav-link">Visitor Information</a>
+				</li>
+				<li class="nav-item border-right">
+					<a href="" class="nav-link">Virtual tours</a>
+				</li>
+				<li class="nav-item border-right">
+					<a href="" class="nav-link">Online Courses</a>
+				</li>
+				<li class="nav-item border-right">
+					<a href="" class="nav-link">Maps & Directions</a>
+				</li>
+				<li class="nav-item">
+					<a href="" class="nav-link">Parking & Transportation</a>
+				</li>
+			</ul>
+		</div>
+
 		<div class="d-flex justify-content-center">
-			<button class="btn btn-danger btn-lg rounded-0 my-5" type="button">
+			<button class="btn btn-danger btn-lg rounded-0 my-3" type="button">
 				More About Academics
 			</button>
 		</div>

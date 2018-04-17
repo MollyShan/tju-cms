@@ -3,13 +3,10 @@
 <div>
 
 	<div id="home-banner">
-		<img src="/images/banner.jpg"
-			alt=""
-			class="img-fluid"
-			id="banner-img">
+		<r-image src="/images/banner.jpg"></r-image>
 		<div class=""
 			id="banner-title">
-			<h1 class="text-white display-1">Stanford</h1>
+			<h1 class="text-white display-1 font-weight-bold">Stanford</h1>
 		</div>
 		<div class=""
 			id="banner-explore">
@@ -33,7 +30,7 @@ export default {
 	name: 'banner',
 	data() {
 		return {
-			bannerHeight: Number
+			// bannerHeight: Number
 		}
 	},
 	computed: {
@@ -41,11 +38,6 @@ export default {
 			return this.$store.state.screen.height + 1;
 		}
 	},
-	mounted() {
-		
-	},
-	methods: {
-	}
 }
 </script>
 
@@ -63,18 +55,11 @@ export default {
 	box-shadow: 0 0 10px rgba(0,0,0,.15),
 			0 3px 3px rgba(0,0,0,.15);
 
-	#banner-img {
-		position: absolute;
-		height: 100%;
-		width: 100%;
-	}
-
 	#banner-title {
 		position: absolute;
 		top: 50%;
-		transform: translateY(-50%);
 		left: 50%;
-		transform: translateX(-50%);
+		transform: translate(-50%, -50%);
 	}
 
 	#banner-explore {

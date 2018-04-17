@@ -4,7 +4,7 @@
 	<div class="container py-5">
 		<div class="row text-center text-white pb-5">
 			<div class="col-sm-6 offset-sm-3">
-				<h2 class="display-4">Stanford Events</h2>
+				<h2 class="display-4 font-weight-bold">Stanford Events</h2>
 				<p class="h2">What's happening on campus</p>
 			</div>
 		</div>
@@ -13,7 +13,9 @@
 				v-for="(info, index) in infoList"
 				:key="index">
 				<div class="card-img-top">
-					<img :src="info.imgUrl" alt="" class="img-fluid">
+					<r-image :src="info.imgUrl"
+						pattern="16:9">
+					</r-image>
 				</div>
 				<div class="card-body card-with-date">
 					<div class="date-box text-center">
@@ -86,10 +88,10 @@ export default {
 	.date-box {
 		width: 3.2rem;
 		height: 3.4rem;
-		padding-top: .2rem;
+		padding-top: .3rem;
 		background: #2f2424;
 		position: absolute;
-		top: -12%;
+		top: -1.8rem;
 	}
 }
 </style>

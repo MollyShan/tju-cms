@@ -16,7 +16,7 @@ export default {
 			return scroll.offsetTop <= screen.height;
 		},
 		isEnterViewer({ screen, scroll }) {
-			return scroll.offsetTop >= screen.height * 3;
+			return scroll.offsetTop >= screen.height * 3.7;
 		}
 	
 	},
