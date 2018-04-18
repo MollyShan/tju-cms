@@ -9,7 +9,8 @@ export default {
 		scroll: {
 			offsetTop: window.scrollY,
 			offsetLeft: window.scrollX
-		}
+		},
+		// isSearchBarShow: false
 	},
 	getters: {
 		isOverViewer({ screen, scroll }) {
@@ -21,7 +22,9 @@ export default {
 	
 	},
 	actions: {
-
+		toggleSearchBar({ commit, state }) {
+			// state.isSearchBarShow ? commit('hideSearchBar') : commit('showSearchBar');
+		}
 	},
 	mutations: {
 		setScreenWidth(state, width) {
@@ -35,6 +38,12 @@ export default {
 		},
 		setScrollOffsetLeft(state, left) {
 			state.scroll.offsetLeft = left;
+		},
+		showSearchBar(state) {
+			// state.isSearchBarShow = true;
+		},
+		hideSearchBar(state) {
+			// state.isSearchBarShow = false;
 		}
 	}
 };

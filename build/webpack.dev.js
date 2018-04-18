@@ -11,7 +11,8 @@ module.exports = merge(baseWebpackConfig, {
 		contentBase: path.resolve(__dirname, '../dist'),
 		port: 7800,
 		proxy: {
-			'/images': 'http://localhost:8080'
+			// '/images': 'http://localhost:8080',
+			'/hsj': 'http://localhost:8080'
 		}
 	},
 	plugins: [

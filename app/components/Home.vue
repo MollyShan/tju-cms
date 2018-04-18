@@ -4,36 +4,51 @@
 	<spacer></spacer>
 	<header class="fixed-top">
 		<nav class="navbar navbar-expand-lg navbar-dark"
-			style="background-color: #b1040e;">
+			style="background-color: #07426a;">
 			<div class="container">
-				<a href="#" class="navbar-brand">Navbar</a>
+				<ul class="navbar-nav">
+					<li class="nav-item">
+						<a href="#" class="nav-link"><i class="fa fa-anchor"></i> 设为首页</a>
+					</li>
+					<li class="nav-item">
+						<a href="#" class="nav-link"><i class="fa fa-star"></i> 加入收藏</a>
+					</li>
+				</ul>
 				<button class="navbar-toggler"
 					type="button"
 					data-toggle="collapse"
 					data-target="#nav-global">
 					<span class="navbar-toggler-icon"></span>
-					Menu
 				</button>
 
 				<div class="collapse navbar-collapse" id="nav-global">
 					<ul class="navbar-nav ml-auto">
-						<li class="nav-item active">
-							<a href="#" class="nav-link">Students<span class="sr-only">(current)</span></a>
+						<li class="nav-item">
+							<a href="#" class="nav-link"><i class="fa fa-android"></i></a>
 						</li>
-						<li class="nav-item active">
-							<a href="#" class="nav-link">Faculty & Staff</a>
+						<li class="nav-item">
+							<a href="#" class="nav-link"><i class="fa fa-mobile"></i></a>
 						</li>
-						<li class="nav-item active">
-							<a href="#" class="nav-link">Parents</a>
+						<li class="nav-item">
+							<a href="#" class="nav-link"><i class="fa fa-weixin"></i></a>
 						</li>
-						<li class="nav-item active">
-							<a href="#" class="nav-link">Alumni</a>
+						<li class="nav-item">
+							<a href="#" class="nav-link"><i class="fa fa-weibo"></i></a>
 						</li>
-						<li class="nav-item active"
+						<li class="nav-item">
+							<a href="#" class="nav-link"><i class="fa fa-envelope"></i></a>
+						</li>
+						<li class="nav-item">
+							<a href="#" class="nav-link"><i class="fa fa-cog"></i></a>
+						</li>
+						<li class="nav-item">
+							<a href="#" class="nav-link"><i class="fa fa-search"></i> 搜索</a>
+						</li>
+						<!-- <li class="nav-item"
 								@click="isSearchTabShow = !isSearchTabShow">
 							<a v-if="isSearchTabShow" class="nav-link font-weight-bold"><i class="fa fa-search"></i> Search</a>
 							<a v-else class="nav-link font-weight-bold"><i class="fa fa-times"></i> Close</a>
-						</li>
+						</li> -->
 					</ul>
 				</div>
 			</div>
@@ -45,28 +60,28 @@
 			}"
 			id="sub-nav">
 			<li class="nav-item">
-				<a href="" class="nav-link">News</a>
+				<a href="#" class="nav-link">首页</a>
 			</li>
 			<li class="nav-item">
-				<a href="" class="nav-link">Events</a>
+				<a href="#" class="nav-link">新闻动态</a>
 			</li>
 			<li class="nav-item">
-				<a href="" class="nav-link">Academics</a>
+				<a href="#" class="nav-link">信息公开</a>
 			</li>
 			<li class="nav-item">
-				<a href="" class="nav-link">Research</a>
+				<a href="#" class="nav-link">办事大厅</a>
 			</li>
 			<li class="nav-item">
-				<a href="" class="nav-link">Health Care</a>
+				<a href="#" class="nav-link">综合查询</a>
 			</li>
 			<li class="nav-item">
-				<a href="" class="nav-link">Campus Life</a>
+				<a href="#" class="nav-link">数据服务</a>
 			</li>
 			<li class="nav-item">
-				<a href="" class="nav-link">Admission</a>
+				<a href="#" class="nav-link">互动交流</a>
 			</li>
 			<li class="nav-item">
-				<a href="" class="nav-link">About</a>
+				<a href="#" class="nav-link">蓝海社区</a>
 			</li>
 		</ul>
 
@@ -79,51 +94,12 @@
 		}">
 		<main style="min-height: 600px">
 			<simple-card-section></simple-card-section>
-			<div class="text-center py-5 container">
-				<h4>Get daily news updates from <span class="font-italic">Stanford Report</span></h4>
-				<div class="form-group row mt-4">
-					<div class="col-sm-6 offset-sm-2">
-						<input type="text"
-							class="form-control rounded-0"
-							placeholder="Enter your email address">
-					</div>
-					<div class="col-sm-2">
-						<button class="btn btn-dark btn-block rounded-0"
-							type="button">Sign Up</button>
-					</div>
-				</div>
-			</div>
+
 			<card-with-date></card-with-date>
 			<image-text-briefing></image-text-briefing>
 			<poster></poster>
 			<picture-with-texts></picture-with-texts>
-			<div class="container py-3 text-center">
-				<div class="row">
-					<div class="col-sm-6 offset-sm-3">
-						<h2 class="display-4 font-weight-bold">About Stanford</h2>
-						<p class="h2">A place for learning, discovery, innovation, expression and discourse</p>
-					</div>
-				</div>
-				<div class="row py-5">
-					<div class="col-sm-4">
-						<h2 class="">19</h2>
-						<p class="h5">Nobel laureates currently on faculty</p>
-					</div>
-					<div class="col-sm-4">
-						<h2 class="">4:1</h2>
-						<p class="h5">Student-to-faculty ratio</p>
-					</div>
-					<div class="col-sm-4">
-						<h2 class="">6,000+</h2>
-						<p class="h5">Externally sponsored research projects</p>
-					</div>
-				</div>
-				<div class="d-flex justify-content-center">
-					<button class="btn btn-danger btn-lg rounded-0 mb-3" type="button">
-						More About Stanford
-					</button>
-				</div>
-			</div>
+			<columnar></columnar>
 		</main>
 		
 
@@ -152,56 +128,40 @@
 			<section id="footer-content">
 				<div class="container pt-4 pb-3">
 					<div class="row">
-						<div class="col-md-10">
-							<div class="row">
-								<div class="col" v-for="(link, index) in linkPool"
-									:key="index">
-									<h5 class="text-uppercase text-danger">{{link.title}}</h5>
-									<ul class="list-unstyled">
-										<li v-for="(item, index) in link.itemList"
-											:key="index"><a href="" class="text-dark">{{item.text}}</a></li>
-									</ul>
-								</div>
-							</div>
+						<div class="col" v-for="(link, index) in linkPool"
+							:key="index">
+							<h5 class="text-uppercase text-danger">{{link.title}}</h5>
+							<ul class="list-unstyled">
+								<li v-for="(item, index) in link.itemList"
+									:key="index"><a :href="item.url" class="text-dark">{{item.text}}</a></li>
+							</ul>
 						</div>
-						<div class="col-md-2">
-							<div class="row">
-								<div class="col m-2" v-for="(button, index) in footButtonList"
-									:key="index">
-									<button class="btn btn-outline-dark btn-block rounded-0">{{button.text}}</button>	
-								</div>
-							</div>
-						</div>
-
 					</div>
 				</div>
 			</section>
 			<section id="footer-global"
 				class="container-fluid py-3"
-				style="background-color: #8c1515;">
+				style="background-color: #0c4b75;">
 				<div class="container">
 					<div class="row">
 						<div class="col-md-2">
-							<h3><a href="" class="text-white">Stanford University</a></h3>
+							<h3 class="mt-3"><a href="" class="text-white">天津海事局</a></h3>
 						</div>
 						<div class="col-md-10">
 							<ul class="nav">
 								<li class="nav-item">
-									<a href="" class="nav-link text-white">Stanford Home</a>
-								</li>
-								<li class="nav-item">
-									<a href="" class="nav-link text-white">Maps & Directions</a>
+									<a href="" class="nav-link text-white">津ICP备020465</a>
 								</li>
 							</ul>
 							<ul class="nav">
 								<li class="nav-item">
-									<a href="" class="nav-link text-white">Terms of Use</a>
+									<a href="" class="nav-link text-white">地址：天津市河西区解放南路369号</a>
 								</li>
 								<li class="nav-item">
-									<a href="" class="nav-link text-white">Privacy Policy</a>
+									<a href="" class="nav-link text-white">邮编：300211</a>
 								</li>
 							</ul>
-							<p class="px-3 pt-2 text-white">©Copyright  Stanford University. Stanford, California 94305.</p>
+							<p class="px-3 pt-2 text-white">中华人民共和国天津海事局版权所有</p>
 						</div>
 					</div>
 				</div>
@@ -220,6 +180,7 @@ import CardWithDate from './directory/card-with-date.vue';
 import ImageTextBriefing from './directory/image-text-briefing.vue';
 import Poster from './directory/poster.vue';
 import PictureWithTexts from './directory/picture-with-texts.vue';
+import Columnar from './directory/columnar.vue';
 import FooterBanner from './directory/footer-banner.vue';
 
 import Spacer from './Spacer.vue';
@@ -234,6 +195,7 @@ export default {
 		ImageTextBriefing,
 		Poster,
 		PictureWithTexts,
+		Columnar,
 		FooterBanner
 	},
 	computed: {
@@ -241,100 +203,101 @@ export default {
 			return this.$store.getters.isOverViewer;
 		},
 	},
+	methods: {
+		showSearchBar() {
+			
+		}
+	},
 	data() {
 		return {
 			isSearchTabShow: true,
 			linkPool: [
 				{
-					title: 'schools',
+					title: '',
 					itemList: [
 						{
-							text: 'Business'
+							text: '中国海事局',
+							url: 'http://www.msa.gov.cn/'
 						},
 						{
-							text: 'Earth, Energy & Environmental Sciences'
+							text: '上海海事局',
+							url: 'http://www.shmsa.gov.cn/html/index.html'
 						},
 						{
-							text: 'Education'
+							text: '辽宁海事局',
+							url: 'http://www.lnmsa.gov.cn/'
 						}
 					]
 				},
 				{
-					title: 'departments',
+					title: '',
 					itemList: [
 						{
-							text: 'Departments A - to  Z'
+							text: '河北海事局',
+							url: 'http://www.hbmsa.gov.cn/html/index.html'
 						},
 						{
-							text: 'Interdisciplinary Programs'
+							text: '山东海事局',
+							url: 'http://www.sdmsa.gov.cn/'
 						}
 					]
 				},
 				{
-					title: 'HEALTH CARE',
+					title: '',
 					itemList: [
 						{
-							text: 'Stanford Health Care'
+							text: '江苏海事局',
+							url: 'http://www.js-msa.gov.cn/'
 						},
 						{
-							text: "Stanford Children's Health"
+							text: "浙江海事局",
+							url: 'http://www.cnzjmsa.gov.cn/ZJ/'
+						},
+						{
+							text: "香港海事处",
+							url: 'https://www.mardep.gov.hk/'
 						}
 					]
 				},
 				{
-					title: 'ABOUT STANFORD',
+					title: '',
 					itemList: [
 						{
-							text: 'Facts'
+							text: '福建海事局',
+							url: 'http://www.fjmsa.gov.cn/index.jsp'
 						},
 						{
-							text: 'History'
+							text: '广东海事局',
+							url: 'https://www.gdmsa.gov.cn/'
 						},
 						{
-							text: 'Accreditation'
+							text: '广西海事局',
+							url: 'http://www.gxmsa.gov.cn/'
 						},
 					]
 				},
 				{
-					title: 'RESOURCES',
+					title: '',
 					itemList: [
 						{
-							text: 'A - to  Z Index'
+							text: '海南海事局',
+							url: 'http://www.hnmsa.gov.cn/'
 						},
 						{
-							text: 'Campus Map'
+							text: '长江海事局',
+							url: 'http://www.cjmsa.gov.cn/'
 						},
 						{
-							text: 'Directory'
+							text: '黑龙江海事局',
+							url: 'http://www.hljmsa.gov.cn/'
 						},
 						{
-							text: 'Stanford Profiles'
+							text: '深圳海事局',
+							url: 'http://sz.msa.gov.cn/'
 						},
 					]
 				}
 			],
-			footButtonList: [
-				{
-					text: 'Applying',
-					href: ''
-				},
-				{
-					text: 'Visiting',
-					href: ''
-				},
-				{
-					text: 'Giving',
-					href: ''
-				},
-				{
-					text: 'Careers',
-					href: ''
-				},
-				{
-					text: 'Contact',
-					href: ''
-				},
-			]
 		}
 	}
 }
@@ -345,11 +308,12 @@ html, body {
 	width: 100%;
 	height: 100%;
 	position: relative;
+	font-family: Microsoft YaHei;
 }
 header {
 
 	#sub-nav.cover-banner {
-		background: linear-gradient(0deg, transparent 0, #020202 75%);
+		background: rgba(0,0,0,.3);
 		box-shadow: none;
 		a {
 			color: #fff;
@@ -360,7 +324,7 @@ header {
 		box-shadow: 0 0 10px rgba(0,0,0,.15),
 			0 3px 3px rgba(0,0,0,.15);
 		a {
-			color: #000;
+			color: #17a2b8;
 		}
 	}
 

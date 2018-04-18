@@ -3,21 +3,30 @@
 <!-- <div> -->
 	<div class="py-5 fuzzy-block">
 		<div class="fuzzy-img-box">
-			<img src="/images/banner.jpg"
+			<img src="/hsj/search.jpg"
 				alt=""
 				class="img-fluid fuzzy-img"
 				:class="{ 'fuzzy': isFuzzyscreenEntered }"
 				>
 
 		</div>
-		<div class="fuzzy-content" v-show="isFuzzyscreenEntered">
-			<div class="fuzzy-head">
+		<div class="fuzzy-content container" v-show="isFuzzyscreenEntered">
+			<!-- <div class="fuzzy-head">
 				<img src="/images/card2.jpg" alt="" class="rounded-circle">
+			</div> -->
+			<h3 class="font-weight-bold display-4">综合查询</h3>
+			<div class="form-group row mt-4">
+				<div class="col-sm-6 offset-sm-2">
+					<input type="text"
+						class="form-control rounded-0"
+						placeholder="请输入关键词">
+				</div>
+				<div class="col-sm-2">
+					<button class="btn btn-info btn-block rounded-0"
+						type="button">查询</button>
+				</div>
 			</div>
-			<h3>“It’s an exciting time to be an aerospace engineer… and thrilling to think that our work could eventually impact space exploration.”</h3>
-			<p class="font-weight-bold mt-5">Debbie Senesky</p>
-			<p class="font-italic">Assistant Professor of Aeronautics and Astronautics</p>
-			<a href="" class="text-white">More about Debbie <span>&gt;</span></a>
+			<a href="" class="text-white">更多查询内容 <span>&gt;</span></a>
 		</div>
 	</div>
 <!-- </div> -->
@@ -47,10 +56,11 @@ export default {
 	.fuzzy-img-box {
 		position: relative;
 		overflow: hidden;
-		background: #000;
+		// background: #000;
 	}
 	.fuzzy-img {
 		transform: scale(1);
+		width: 100%;
 	}
 
 	.fuzzy-content {

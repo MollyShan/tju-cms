@@ -1,11 +1,11 @@
 <template>
 
-<div style="background: #2f2424;">
+<div style="background: #24262f;">
 	<div class="container py-5">
-		<div class="row text-center text-white pb-5">
+		<div class="row text-center text-white py-5">
 			<div class="col-sm-6 offset-sm-3">
-				<h2 class="display-4 font-weight-bold">Stanford Events</h2>
-				<p class="h2">What's happening on campus</p>
+				<h2 class="display-4 font-weight-bold">信息公开</h2>
+				<p class="h2">政府信息公开</p>
 			</div>
 		</div>
 		<div class="card-deck">
@@ -22,15 +22,15 @@
 						<p class="text-white mb-0">{{info.month}}</p>
 						<p class="text-white mb-0">{{info.date}}</p>
 					</div>
-					<h5 class="card-title text-danger">{{info.title}}</h5>
+					<h5 class="card-title text-info">{{info.title}}</h5>
 					<h5 class="card-text">{{info.abstract}}</h5>
-					<p class="card-text">{{info.time}}</p>
+					<!-- <p class="card-text">{{info.time}}</p> -->
 				</div>
 			</div>
 		</div>
 		<div class="d-flex justify-content-center">
-			<button class="btn btn-danger btn-lg rounded-0 my-5" type="button">
-				More Stanford Events
+			<button class="btn btn-info btn-lg rounded-0 my-5" type="button">
+				更多信息公开内容
 			</button>
 		</div>
 	</div>
@@ -44,35 +44,35 @@ export default {
 		return {
 			infoList: [
 				{
-					imgUrl: '/images/card1.jpg',
-					month: 'APR',
+					imgUrl: '/hsj/info1.jpg',
+					month: '四月',
 					date: '14',
-					title: 'PERFORMANCE',
-					abstract: 'Akira Tana and His Secret Agent Band',
+					title: '公开指南',
+					abstract: '为了更好提供政府信息公开服务，本机关编制了《天津海事局政府信息公开指南》。',
 					time: 'through April 14, 2018'
 				},
 				{
-					imgUrl: '/images/card2.jpg',
-					month: 'APR',
+					imgUrl: '/hsj/info2.jpg',
+					month: '四月',
 					date: '16',
-					title: 'LECTURE',
-					abstract: 'Leading a Meaningful Life: A Conversation with Ted Koppel',
+					title: '公开目录',
+					abstract: '政府公开信息目录',
 					time: '12:00 PM'
 				},
 				{
-					imgUrl: '/images/card3.jpg',
-					month: 'APR',
+					imgUrl: '/hsj/info3.jpg',
+					month: '四月',
 					date: '17',
-					title: 'LECTURE',
-					abstract: 'A Reading by Elizabeth Alexander - in Honor of National Poetry Month.',
+					title: '公开年报',
+					abstract: '天津海事局2017政府信息公开年度报告',
 					time: '3:30 PM'
 				},
 				{
-					imgUrl: '/images/card4.jpg',
-					month: 'APR',
+					imgUrl: '/hsj/info4.jpg',
+					month: '四月',
 					date: '17',
-					title: 'ARTS',
-					abstract: 'Is AI the New Frankenstein? with Ken Goldberg',
+					title: '公开申请',
+					abstract: '申请人需要本机关主动公开以外的政府信息，可以向本机关申请获取。',
 					time: '5:00 PM'
 				}
 			]
@@ -89,7 +89,7 @@ export default {
 		width: 3.2rem;
 		height: 3.4rem;
 		padding-top: .3rem;
-		background: #2f2424;
+		background: #24262f;
 		position: absolute;
 		top: -1.8rem;
 	}

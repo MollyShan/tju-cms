@@ -19,7 +19,7 @@ export default new Vue({
 #main-spacer {
 	visibility: hidden;
 	z-index: -100;
-	height: 7083px;
+	height: 7298px;
 	// width: auto;
 	display: block;
 }

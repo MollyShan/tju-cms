@@ -4,20 +4,20 @@
 	<div class="container pt-5 pb-3">
 		<div class="row text-center">
 			<div class="col-sm-6 offset-sm-3">
-				<h2 class="display-4 font-weight-bold">Stanford Today</h2>
-				<p class="h2">The latest news from Stanford</p>
+				<h2 class="display-4 font-weight-bold">新闻动态</h2>
+				<p class="h2">海事局最新热点新闻</p>
 			</div>
 		</div>
 
 		<div class="py-5 card-float card-with-big-img">
-			<r-image src="/images/card4.jpg"
+			<r-image src="/hsj/banner3.jpg"
 				pattern="16:9"
 				class="card-img-big">
 			</r-image>
 			<div class="card rounded-0 d-none d-lg-block">
 				<div class="card-body">
-					<h5 class="card-title text-danger">CAMPUS LIFE</h5>
-					<p class="card-text">Retired Stanford Trees have found a home in Green Library</p>
+					<h5 class="card-title text-info">新港海事局</h5>
+					<p class="card-text">新港海事局持续加强内河船监管工作</p>
 				</div>
 			</div>
 		</div>
@@ -32,15 +32,15 @@
 					</r-image>
 				</div>
 				<div class="card-body">
-					<h5 class="card-title text-danger">{{info.title}}</h5>
+					<h5 class="card-title text-info">{{info.title}}</h5>
 					<p class="card-text">{{info.abstract}}</p>
 				</div>
 			</div>
 		</div>
 
 		<div class="d-flex justify-content-center">
-			<button class="btn btn-danger btn-lg rounded-0 my-5" type="button">
-				More Stanford News
+			<button class="btn btn-info btn-lg rounded-0 my-5" type="button">
+				更多海事局新闻
 			</button>
 		</div>
 	</div>
@@ -54,24 +54,24 @@ export default {
 		return {
 			cardInfoList: [
 				{
-					imgUrl: '/images/card1.jpg',
-					title: 'LAW & POLICY',
-					abstract: 'Intellectual property and China: Is China stealing American IP?'
+					imgUrl: '/hsj/banner1.jpg',
+					title: '大沽口海事局',
+					abstract: '大沽口海事局办公室党工部联合党支部组织开展红色主题教育活动'
 				},
 				{
-					imgUrl: '/images/card2.jpg',
-					title: 'UNIVERSITY AFFAIRS',
-					abstract: 'Title IX resolution'
+					imgUrl: '/hsj/banner2.jpg',
+					title: '新港海事局',
+					abstract: '新港海事局持续加强内河船监管工作'
 				},
 				{
-					imgUrl: '/images/card3.jpg',
-					title: 'LAW & POLICY',
-					abstract: 'It’s tax time! Does it really need to be such a painful process?'
+					imgUrl: '/hsj/banner4.jpg',
+					title: '中国海事船舶安全检查',
+					abstract: '中国海事船舶安全检查网改版打造立体化网络宣传平台'
 				},
 				{
-					imgUrl: '/images/card4.jpg',
-					title: 'SCIENCE & TECHNOLOGY',
-					abstract: 'Autonomous robotics class integrates theory and practice'
+					imgUrl: '/hsj/banner5.jpg',
+					title: '南疆海事局',
+					abstract: '南疆海事局圆满完成“供暖季”南疆LNG码头各进港LNG船舶的安全保障工作'
 				},
 			],
 		}
@@ -85,14 +85,6 @@ export default {
 	.card-img-big {
 		box-shadow: 2px 3px 10px rgba(0,0,0,.15),
 				-2px 3px 10px rgba(0,0,0, .15)
-	}
-	.card-img-big:hover {
-		cursor: pointer;
-		box-shadow: 3px 5px 15px rgba(0,0,0,.15),
-					-3px 5px 15px rgba(0,0,0, .15);
-		img {
-			transform: scale(1.2) translate(-50%, -50%);
-		}
 	}
 	.card-img-top {
 		&:hover {
